@@ -187,6 +187,23 @@ $(function () {
           $('.section1-cover-title').fadeIn();
         }
       }
+      let text1 = document.querySelector('.section2-title');
+
+      let observer = new IntersectionObserver((e) => {
+        console.log('E', e);
+
+        e.forEach((박스) => {
+          if (박스.isIntersecting) {
+            박스.target.style.top = 0;
+            박스.target.style.opacity = 1;
+          } else {
+            박스.target.style.opacity = 0;
+            박스.target.style.top = 100 + '%';
+          }
+        });
+      });
+
+      observer.observe(text1);
     });
   }
 });
