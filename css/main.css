@@ -57,6 +57,7 @@ header nav ul li {
 }
 .go-home img {
   width: 40px;
+  display: block;
 }
 /* ------------ */
 .main {
