@@ -12,6 +12,7 @@
 
 body {
   font-family: 'NanumSquareNeo-Variable';
+  overflow-x: hidden;
 }
 
 a {
@@ -42,7 +43,7 @@ header {
 }
 header a {
   color: #fff;
-  font-size: 25px;
+  font-size: 23px;
 }
 header nav ul li {
   float: left;
@@ -136,7 +137,7 @@ header nav ul li {
 }
 .section2-title {
   color: #fff;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 100px;
   position: absolute;
   transition: all 1s;
@@ -145,7 +146,7 @@ header nav ul li {
 .section2-des {
   margin-top: 50px;
   color: #fff;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 55px;
   text-align: left;
   position: absolute;
