@@ -141,7 +141,7 @@ header nav ul li {
   align-items: center;
 }
 .section2-text-box {
-  left: 33%;
+  left: 30%;
   text-align: left;
   position: relative;
   width: 100%;
@@ -328,4 +328,13 @@ header nav ul li {
   top: 0;
   left: 0;
   z-index: 20;
+}
+/* footer */
+.box {
+  padding: 50px 0;
+  background-color: #fff;
+}
+.box_wrap .end {
+  text-align: center;
+  line-height: 40px;
 }
