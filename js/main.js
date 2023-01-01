@@ -12,6 +12,23 @@ $(function () {
       let sco = scrollTop;
       console.log(sco);
 
+      var scrollBottom =
+        $(document).height() - $(window).height() - $(window).scrollTop();
+      console.log('scrollbottom', scrollBottom);
+      // scroll bottom 이 300 이하이면 아래 속성 변경
+      if (scrollBottom < 300) {
+        $('#video').css({ 'background-color': '#fff' });
+        $('header a').css({ color: 'black' });
+        $('header h1').css({ color: 'black' });
+        $('.service').css({ 'background-color': 'black' });
+        $('.service a').css({ color: '#fff' });
+      } else {
+        $('#video').css({ 'background-color': 'black' });
+        $('header a').css({ color: '#fff' });
+        $('header h1').css({ color: '#fff' });
+        $('.service').css({ 'background-color': '#fff' });
+        $('.service a').css({ color: 'black' });
+      }
       // 스크롤이벤트 헤더 in/out
       if (sco > 1000) {
         $('header').css({ top: 0 });
@@ -45,7 +62,7 @@ $(function () {
           $('.transform').css({ opacity: 0 });
         }
 
-        if (sco >= 2450) {
+        if (sco >= 2600) {
           $('.flip').css({
             display: 'inline-block',
             width: `${sco - 2800}px`,
@@ -97,6 +114,8 @@ $(function () {
         console.log('dd', section.height());
       }
       let text1 = document.querySelector('.section2-title');
+      let text2 = document.querySelector('.section3-title');
+      let text3 = document.querySelector('.section4-title');
 
       let observer = new IntersectionObserver((e) => {
         console.log('E', e);
@@ -107,12 +126,14 @@ $(function () {
             박스.target.style.opacity = 1;
           } else {
             박스.target.style.opacity = 0;
-            박스.target.style.top = 100 + '%';
+            박스.target.style.top = 30 + '%';
           }
         });
       });
 
       observer.observe(text1);
+      observer.observe(text2);
+      observer.observe(text3);
     });
 
     // -------------window 가로 2000이하일떄
@@ -122,6 +143,23 @@ $(function () {
       let scrollTop = $(this).scrollTop();
       let sco = scrollTop;
       console.log(sco);
+      var scrollBottom =
+        $(document).height() - $(window).height() - $(window).scrollTop();
+      console.log('scrollbottom', scrollBottom);
+      // scroll bottom 이 300 이하이면 아래 속성 변경
+      if (scrollBottom < 300) {
+        $('#video').css({ 'background-color': '#fff' });
+        $('header a').css({ color: 'black' });
+        $('header h1').css({ color: 'black' });
+        $('.service').css({ 'background-color': 'black' });
+        $('.service a').css({ color: '#fff' });
+      } else {
+        $('#video').css({ 'background-color': 'black' });
+        $('header a').css({ color: '#fff' });
+        $('header h1').css({ color: '#fff' });
+        $('.service').css({ 'background-color': '#fff' });
+        $('.service a').css({ color: 'black' });
+      }
       // 스크롤이벤트 헤더 in/out
       if (sco > 1000) {
         $('header').css({ top: 0 });
@@ -157,7 +195,7 @@ $(function () {
           $('.transform').css({ opacity: 0 });
         }
 
-        if (sco >= 2400) {
+        if (sco >= 2530) {
           $('.flip').css({
             display: 'inline-block',
             width: `${sco - 2800}px`,
@@ -205,6 +243,8 @@ $(function () {
         }
       }
       let text1 = document.querySelector('.section2-title');
+      let text2 = document.querySelector('.section3-title');
+      let text3 = document.querySelector('.section4-title');
 
       let observer = new IntersectionObserver((e) => {
         console.log('E', e);
@@ -215,12 +255,14 @@ $(function () {
             박스.target.style.opacity = 1;
           } else {
             박스.target.style.opacity = 0;
-            박스.target.style.top = 100 + '%';
+            박스.target.style.top = 30 + '%';
           }
         });
       });
 
       observer.observe(text1);
+      observer.observe(text2);
+      observer.observe(text3);
     });
   }
 });
